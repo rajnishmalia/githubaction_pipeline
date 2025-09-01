@@ -1,0 +1,9 @@
+name: rajnish
+on: push
+jobs:
+  my 1st pipeline:
+  name: print
+  runs-on: ubuntu-latest
+  steps:
+    -name: dhondhu
+     run: print dhondhu name
