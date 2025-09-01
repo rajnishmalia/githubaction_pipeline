@@ -6,7 +6,7 @@ on:
 jobs:
   terraform_init:
     name: terraform init
-    runs-on: dosti
+    runs-on: self-hosted
     steps:
        - name: Terraform installer
          uses: autero1/action-terraform@v3.0.1
