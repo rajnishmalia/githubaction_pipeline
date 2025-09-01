@@ -29,7 +29,7 @@ resource "azurerm_resource_group" "example" {
   location = "West Europe"
 }
 resource "azurerm_storage_account" "example" {
-  name                     = "storageaccountname111"
+  name                     = "stgacc02092025"
   resource_group_name      = "example1988"
   location                 = "West Europe"
   account_tier             = "Standard"
