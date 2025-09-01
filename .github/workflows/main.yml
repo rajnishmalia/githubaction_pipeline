@@ -1,12 +1,44 @@
-name: rajnish
+name: terraform infra
 
-on: push
-
+on:
+  workflow_dispatch:
+  
+permissions:
+  id-token: write         # Required for OIDC
+  contents: read
+  actions: read
+  checks: read
+env:
+  ARM_CLIENT_ID: "c44fe8da-f25e-4e10-85bd-dceb7cb5a63d"  
+  ARM_CLIENT_SECRET: "ZBk8Q~e~O8AcXgOfojOhNdLbEG3~YHd6tzjBYc-L"
+  ARM_SUBSCRIPTION_ID: "3be29ba2-b31c-4fbd-a7bb-c51bf50ef740"         # Your Azure subscription
+  ARM_TENANT_ID: "a6c82882-76f1-4e7b-af65-456ff85858b4" 
 jobs:
-  my_1st_pipeline:
-    name: Print
-    runs-on: ubuntu-latest
+  terraform_init:
+    name: terraform init
+    runs-on: self-hosted
     steps:
-      - name: dhondhu
-        run: echo "print dhondhu name"
+       - name: Checkout repo
+         uses: actions/checkout@v3
+       # - name: Terraform installer
+       #   uses: autero1/action-terraform@v3.0.1
+       #   with:
+       #     terraform-version: latest
+       - name: Check Terraform Version
+         run: terraform version
+       - name: Terraform Init
+         run: terraform init 
+       - name: Terraform validate
+         run: terraform validate
+       - name: Terraform plan
+         run: terraform plan
+       - name: Terraform apply
+         run: terraform apply -auto-approve
+         
+      
+              
+              
+        
+ 
+          
 
