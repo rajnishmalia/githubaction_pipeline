@@ -11,7 +11,7 @@ permissions:
 env:
   ARM_CLIENT_ID: "c44fe8da-f25e-4e10-85bd-dceb7cb5a63d"  
   ARM_CLIENT_SECRET: "ZBk8Q~e~O8AcXgOfojOhNdLbEG3~YHd6tzjBYc-L"
-  ARM_SUBSCRIPTION_ID: "3be29ba2-b31c-4fbd-a7bb-c51bf50ef740"         # Your Azure subscription
+  ARM_SUBSCRIPTION_ID: "3be29ba2-b31c-4fbd-a7bb-c51bf50ef740"         # Your Azuure subscription
   ARM_TENANT_ID: "a6c82882-76f1-4e7b-af65-456ff85858b4" 
 jobs:
   terraform_init:
