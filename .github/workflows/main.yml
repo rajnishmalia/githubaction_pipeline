@@ -14,12 +14,13 @@ jobs:
     steps:
        - name: Checkout repo
          uses: actions/checkout@v3
-       - name: Terraform installer
-         uses: autero1/action-terraform@v3.0.1
-         with:
-           terraform-version: latest
+       # - name: Terraform installer
+       #   uses: autero1/action-terraform@v3.0.1
+       #   with:
+       #     terraform-version: latest
+       - name: Check Terraform Version
+         run: terraform version
        - name: Terraform Init
-         working-directory: 
          run: terraform init 
          
       
