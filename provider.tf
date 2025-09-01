@@ -19,22 +19,22 @@ provider "azurerm" {
  features{}
  subscription_id = "3be29ba2-b31c-4fbd-a7bb-c51bf50ef740"
 }
-resource "azurerm_resource_group" "example1" {
-  name     = "example11988"
+resource "azurerm_resource_group" "exam1" {
+  name     = "example11901"
   location = "West Europe"
 }
 
-resource "azurerm_resource_group" "example" {
-  name     = "example1988"
+resource "azurerm_resource_group" "example1" {
+  name     = "example1902"
   location = "West Europe"
 }
 resource "azurerm_storage_account" "example" {
-  name                     = "stgacc02092025"
+  name                     = "stgacc02092026"
   resource_group_name      = "example1988"
   location                 = "West Europe"
   account_tier             = "Standard"
   account_replication_type = "GRS"
-  depends_on = [azurerm_resource_group.example]
+  depends_on = [azurerm_resource_group.example1]
 
   
 }
