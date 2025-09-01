@@ -6,4 +6,4 @@ jobs:
   runs-on: ubuntu-latest
   steps:
     -name: dhondhu
-     run: print dhondhu name
+     run: echo "print dhondhu name"
