@@ -1,9 +1,12 @@
 name: rajnish
+
 on: push
+
 jobs:
   my_1st_pipeline:
-  name: print
-  runs-on: ubuntu-latest
-  steps:
-    - name: dhondhu
-      run: echo "print dhondhu name"
+    name: Print
+    runs-on: ubuntu-latest
+    steps:
+      - name: dhondhu
+        run: echo "print dhondhu name"
+
