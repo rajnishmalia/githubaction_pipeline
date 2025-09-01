@@ -19,7 +19,9 @@ jobs:
          with:
            terraform-version: latest
        - name: Terraform Init
+         working-directory: 
          run: terraform init 
+         
       
               
               
