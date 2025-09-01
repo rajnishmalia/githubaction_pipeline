@@ -2,12 +2,18 @@ name: terraform infra
 
 on:
   workflow_dispatch:
+  
+permissions:
+  actions: read
+  checks: read
 
 jobs:
   terraform_init:
     name: terraform init
     runs-on: self-hosted
     steps:
+       - name: Checkout repo
+         uses: actions/checkout@v3
        - name: Terraform installer
          uses: autero1/action-terraform@v3.0.1
          with:
