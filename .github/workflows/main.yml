@@ -1,12 +1,23 @@
-name: rajnish
+name: terraform infra
 
-on: push
+on:
+  workflow_dispatch:
 
 jobs:
-  my_1st_pipeline:
-    name: Print
-    runs-on: ubuntu-latest
+  terraform_init:
+    name: terraform init
+    runs-on: dosti
     steps:
-      - name: dhondhu
-        run: echo "print dhondhu name"
+       - name: Terraform installer
+         uses: autero1/action-terraform@v3.0.1
+         with:
+           terraform-version: latest
+       - name: Terraform Init
+         run: terraform init 
+      
+              
+              
+        
+ 
+          
 
